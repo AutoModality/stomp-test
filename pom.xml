@@ -50,7 +50,7 @@
   <site>
     <id>x1-website</id>
     <name>X1 Website</name>
-    <url>ftp://test4echo.x1/ftp/pub/maven/site/x1/stomp-test</url>
+    <url>dav:http://www.x1/nexus/content/repositories/x1-site/${project.groupId}/${project.artifactId}/${project.version}</url>
   </site>
     <repository>
       <id>x1-repo</id>
@@ -243,7 +243,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.6.4.201312101107</version>
+        <version>0.7.1.201405082137</version>
         <executions>
           <execution>
             <id>prepare-agent</id>
@@ -294,8 +294,8 @@
               <artifactId>schemaspy-maven-plugin</artifactId>
               <version>1.5</version>
               <configuration>
-                <host>centos.x1</host>
-                <dbname>test</dbname>
+                <host>db.x1</host>
+                <dbname>stocks</dbname>
                 <schema>stocks</schema>
                 <username>stocks</username>
                 <password>stocks</password>
@@ -310,7 +310,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-report-plugin</artifactId>
-              <version>2.16</version>
+              <version>2.17</version>
               <configuration>
                 <testFailureIgnore>true</testFailureIgnore>
               </configuration>
@@ -325,7 +325,7 @@
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
-              <version>2.5.2</version>
+              <version>2.5.4</version>
               <configuration>
                 <xmlOutput>true</xmlOutput>
                 <!-- <excludeFilterFile>etc/findbugs-exclude.xml</excludeFilterFile> -->
@@ -334,7 +334,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-checkstyle-plugin</artifactId>
-              <version>2.10</version>
+              <version>2.12.1</version>
               <configuration>
                 <configLocation>etc/checkstyle.xml</configLocation>
                 <!-- <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation> -->
@@ -358,8 +358,8 @@
     <extensions>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ftp</artifactId>
-        <version>2.6</version>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>2.4</version>
       </extension>
     </extensions>
   </build>
@@ -374,7 +374,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.16</version>
+            <version>2.17</version>
             <configuration>
               <skip>true</skip>
             </configuration>
@@ -393,7 +393,7 @@
         <dependency>
           <groupId>org.jacoco</groupId>
           <artifactId>org.jacoco.core</artifactId>
-          <version>0.6.4.201312101107</version>
+          <version>0.7.1.201405082137</version>
           <scope>test</scope>
         </dependency>
       </dependencies>
@@ -401,7 +401,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.16</version>
+            <version>2.17</version>
             <configuration>
               <skip>false</skip>
             </configuration>
@@ -422,7 +422,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.16</version>
+            <version>2.17</version>
             <configuration>
               <skip>false</skip>
             </configuration>

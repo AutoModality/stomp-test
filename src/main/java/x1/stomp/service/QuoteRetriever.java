@@ -17,7 +17,7 @@ import x1.stomp.model.Quote;
 import x1.stomp.model.Share;
 
 public class QuoteRetriever {
-  private static final String URL = "http://de.finance.yahoo.com/d/quotes.csv?s={0}&f=sna";
+  private static final String URL = "http://finance.yahoo.com/d/quotes.csv?s={0}&f=sna";
   private static final String CURRENCY = "EUR";
 
   @Inject
