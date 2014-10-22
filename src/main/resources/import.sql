@@ -1,1 +1,1 @@
-insert into Share(id, key, name, version) values (0, 'MSFT', 'Microsoft Corporation', 0)
+insert into stocks.share(id, key, name, version) values (0, 'MSFT', 'Microsoft Corporation', 0)
