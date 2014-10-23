@@ -1,7 +1,7 @@
 var client = new Client();
 
 function Client() {
-	this.url = "ws://localhost:61614/stomp";
+	this.url = "ws://localhost:61613/stomp";
 	this.login = "guest";
 	this.passcode = "guest_12345!";
 	this.stocksQueue = "jms.queue.stocksQueue";
