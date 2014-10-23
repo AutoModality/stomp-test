@@ -9,3 +9,5 @@ MANIFEST.MF
 .idea
 *.iml
 /.factorypath
+.settings/*
+!.settings/.jsdtscope
